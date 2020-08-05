@@ -105,6 +105,17 @@
   font: 1.6rem Archivo;
 }
 
+/* Additional feature: Change default user-agent arrow on <select> */
+.select-block select {
+  /* Disabled default user-agent arrow*/
+  appearance: none;
+
+  /* Added custom arrow */
+  background-image: url(/images/icons/select-arrow.svg);
+  background-position: calc(100% - 1rem) center;
+  background-repeat: no-repeat;
+}
+
 .input-block:focus-within::after {
   content: "";
 

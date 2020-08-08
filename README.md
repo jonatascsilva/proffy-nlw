@@ -1,7 +1,8 @@
 
 # Proffy &middot; ![License](https://img.shields.io/github/license/jonatascsilva/proffy-nlw?style=flat) ![GitHub language count](https://img.shields.io/github/languages/count/jonatascsilva/proffy-nlw?style=flat) ![GitHub repo size](https://img.shields.io/github/repo-size/jonatascsilva/proffy-nlw?style=flat)
 
-Proffy is an online study platform to connect students and teachers. This project was made during the NLW #2 (Next Level Week) from @Rocketseat.
+Proffy is an online study platform to connect students and teachers. This
+project was made during the Discovery track in NLW #2 (Next Level Week) from @Rocketseat.
 
 <p align="center">
  <a href="#-layout">Layout</a> • 
@@ -18,9 +19,9 @@ The project's layout can be accessed on Figma on [this link](https://www.figma.c
 ## 🚀 Technologies
 
 This project was developed with the following technologies:
-- [HTML]()
-- [CSS]()
-- [JavaScript]()
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/)
+- [JavaScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 ## 🏁 How to run
 

@@ -52,77 +52,34 @@
         </div>
       </header>
       <main>
-        {% for proffy in proffys %}
-          <article class="teacher-item">
-            <header>
-              <img src="{{ proffy.avatar }}" alt="{{ proffy.name }}">
-              <div>
-                <strong>{{ proffy.name }}</strong>
-                <span>{{ proffy.subject }}</span>
-              </div>
-            </header>
-            <p>{{ proffy.bio }}</p>
-            <footer>
-              <p>Preço/hora <strong>R$ {{ proffy.cost }}</strong></p>
-              <a
-                href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{ proffy.whatsapp }}&text=Tenho interesse na sua aula de {{ proffy.subject }}, {{ proffy.name }}!"
-                class="button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/images/icons/whatsapp.svg" alt="WhatsApp">
-                Entrar em contato
-              </a>
-            </footer>
-          </article>
-        {% endfor %}
-        
-        <!-- <article class="teacher-item">
-          <header>
-            <img
-            src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4"
-            alt="Mayk Brito">
-            <div>
-              <strong>Diego Fernandes</strong>
-              <span>Educação Física</span>
-            </div>
-          </header>
-          <p>Instrutor de Educação Física para iniciantes, minha missão de vida
-          é levar saúde e contribuir para o crescimento de quem se
-          interessar.<br><br>Comecei a minha jornada profissional em 2001,
-          quando meu pai me deu dois alteres de 32kg com a seguinte condição:
-          "Aprenda a fazer dinheiro com isso!"</p>
-          <footer>
-            <p>Preço/hora <strong>R$40,00</strong></p>
-            <button type="button">
-              <img src="/images/icons/whatsapp.svg" alt="WhatsApp">
-              Entrar em contato
-            </button>
-          </footer>
-        </article>
-        <article class="teacher-item">
-          <header>
-            <img
-            src="https://mir-s3-cdn-cf.behance.net/user/115/4713a37191453.5f14e9ebb5e58.jpg"
-            alt="Tiago Luchtenberg">
-            <div>
-              <strong>Tiago Luchtenberg</strong>
-              <span>Geografia</span>
-            </div>
-          </header>
-          <p>As vezes não sei nem onde eu tô, mas consigo me localizar
-          facilmente em qualquer lugar. Tenho memória fotográfica e nunca fico
-          perdido.<br><br>Eu ensino a galera como não se perder na vida, com
-          lições geográficas simples pra você nunca mais precisar de mapa na sua
-          bela vida.</p>
-          <footer>
-            <p>Preço/hora <strong>R$360,00</strong></p>
-            <button type="button">
-              <img src="/images/icons/whatsapp.svg" alt="WhatsApp">
-              Entrar em contato
-            </button>
-          </footer>
-        </article> -->
+        {% if proffys == "" %}
+          <p class="no-results">Nenhum professor encontrado com a sua pesquisa.</p>
+        {% else %}
+          {% for proffy in proffys %}
+            <article class="teacher-item">
+              <header>
+                <img src="{{ proffy.avatar }}" alt="{{ proffy.name }}">
+                <div>
+                  <strong>{{ proffy.name }}</strong>
+                  <span>{{ proffy.subject }}</span>
+                </div>
+              </header>
+              <p>{{ proffy.bio }}</p>
+              <footer>
+                <p>Preço/hora <strong>R$ {{ proffy.cost }}</strong></p>
+                <a
+                  href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{ proffy.whatsapp }}&text=Tenho interesse na sua aula de {{ proffy.subject }}, {{ proffy.name }}!"
+                  class="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/images/icons/whatsapp.svg" alt="WhatsApp">
+                  Entrar em contato
+                </a>
+              </footer>
+            </article>
+          {% endfor %}
+        {% endif %}
       </main>
     </div>
   </body>
